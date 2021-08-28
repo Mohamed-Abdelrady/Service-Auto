@@ -1,0 +1,115 @@
+@media (max-width: 991px) {
+  body.active {
+    overflow: hidden;
+  }
+  .header .hd-nav .nav-menu {
+    flex-direction: column;
+    background-color: #f3b93e;
+    justify-content: space-evenly;
+    min-height: 400px;
+  }
+  .header .hd-nav .nav-parent {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f3b93e;
+    overflow: auto;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header .hd-nav .nav-parent.active {
+    left: 0;
+  }
+
+  .header .hd-nav .nav-menu .nav-item.active a,
+  .header .hd-nav .nav-menu li svg {
+    color: #3e3b34;
+  }
+
+  .header .hd-nav .bars {
+    display: block;
+    cursor: pointer;
+  }
+  .header .hd-nav .bars.active {
+    margin-right: 10px;
+  }
+
+  .header .hd-nav .bars.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header .hd-nav .bars.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .header .hd-nav .bars.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .header .hd-slider .carousel-inner .carousel-caption {
+    width: 70%;
+  }
+  .projects {
+    clip-path: polygon(0 0, 100% 8%, 100% 96%, 0 100%);
+  }
+  .projects h2:after {
+    display: none;
+  }
+  .services {
+    transform: translateY(-19%);
+  }
+  .reviews {
+    transform: translateY(-30%);
+  }
+}
+
+@media (max-width: 1199px) {
+  .services .box:after {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .projects {
+    clip-path: polygon(0 0, 100% 4%, 100% 96%, 0 100%);
+  }
+}
+@media (max-width: 575px) {
+  .header .hd-nav .nav-logo img {
+    width: 106px;
+    height: 58px;
+    margin-right: 4px;
+  }
+  .header .navbar-up {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .header .hd-nav .nav-logo h2 {
+    font-size: 1.5rem;
+  }
+  .header .hd-nav .nav-logo div > span {
+    font-size: 0.8rem;
+  }
+  .testimonials {
+    clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 94%);
+    transform: translateY(-16%);
+  }
+  .projects {
+    transform: translateY(-22%);
+  }
+  .service-cerfited {
+    transform: translateY(-17%);
+  }
+  .services {
+    transform: translateY(-44%);
+  }
+  .reviews {
+    transform: translateY(-30%);
+    margin-bottom: -40%;
+  }
+}
